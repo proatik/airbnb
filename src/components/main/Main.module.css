@@ -1,0 +1,104 @@
+.grid {
+  gap: 30px;
+  display: grid;
+  padding: 20px 0;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.item {
+  position: relative;
+  border-radius: 5px;
+  grid-column: span 12;
+  box-sizing: border-box;
+}
+
+.item a {
+  text-decoration: none;
+}
+
+.item img {
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  border-radius: 8px;
+  aspect-ratio: 20 / 19;
+}
+
+.item button {
+  z-index: 5;
+  top: 10px;
+  right: 10px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  display: inline-flex;
+  background-color: transparent;
+  transition: 150ms all ease-in-out;
+}
+
+.item button:hover {
+  transform: scale(1.1);
+}
+
+.vintage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 8px;
+  aspect-ratio: 20 / 19;
+  background: linear-gradient(
+    180deg,
+    rgba(150, 150, 150, 0.3) 0%,
+    rgba(255, 255, 255, 0) 15%,
+    rgba(255, 255, 255, 0) 85%,
+    rgba(150, 150, 150, 0.3) 100%
+  );
+}
+
+.info {
+  margin-top: 16px;
+}
+
+.info div:nth-child(1) {
+  color: #222;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.info div:nth-child(2),
+.info div:nth-child(3) {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #848282;
+}
+
+.info div:nth-child(4) {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #848282;
+}
+
+.info div:nth-child(4) span {
+  color: #222;
+  font-weight: 500;
+}
+
+/* responsive */
+@media (min-width: 768px) {
+  .item {
+    grid-column: span 6;
+  }
+}
+
+@media (min-width: 1024px) {
+  .item {
+    grid-column: span 4;
+  }
+}
+
+@media (min-width: 1280px) {
+  .item {
+    grid-column: span 3;
+  }
+}

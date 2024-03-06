@@ -1,0 +1,150 @@
+.footer {
+  margin-top: 30px;
+  background-color: #f7f7f7;
+}
+
+.menu {
+  gap: 20px;
+  display: grid;
+  padding: 50px 0;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.menu > div > div {
+  color: #222222;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.menu > div a {
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  color: #222222;
+  margin-bottom: 12px;
+}
+
+.menu > div a:hover {
+  text-decoration: underline;
+}
+
+.menu > div:nth-child(1) {
+  grid-column: span 12;
+}
+
+.menu > div:nth-child(2) {
+  grid-column: span 12;
+}
+
+.menu > div:nth-child(3) {
+  grid-column: span 12;
+}
+
+.divider {
+  border-bottom: 1px solid #d0d0d0;
+}
+
+.kicker {
+  gap: 20px;
+  display: flex;
+  padding: 20px 0;
+  align-items: start;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.kicker > div:first-child {
+  order: 1;
+  gap: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.kicker > div:last-child {
+  order: 0;
+  gap: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.kicker > div:last-child > div:nth-child(1) {
+  gap: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.kicker > div:last-child > div:nth-child(2) {
+  gap: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.kicker > div > div {
+  font-size: 14px;
+  color: #222222;
+  display: inline-block;
+}
+
+.kicker > div a {
+  font-size: 14px;
+  color: #222222;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.kicker > div a:hover {
+  text-decoration: underline;
+}
+
+/* responsive */
+@media (min-width: 768px) {
+  .menu > div:nth-child(1) {
+    grid-column: span 6;
+  }
+
+  .menu > div:nth-child(2) {
+    grid-column: span 6;
+  }
+
+  .menu > div:nth-child(3) {
+    grid-column: span 6;
+  }
+
+  .kicker {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .kicker {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .kicker > div:first-child {
+    order: 0;
+  }
+
+  .kicker > div:last-child {
+    order: 1;
+  }
+}
+
+@media (min-width: 1280px) {
+  .menu > div:nth-child(1) {
+    grid-column: span 4;
+  }
+
+  .menu > div:nth-child(2) {
+    grid-column: span 4;
+  }
+
+  .menu > div:nth-child(3) {
+    grid-column: span 4;
+  }
+}

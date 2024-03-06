@@ -1,0 +1,172 @@
+.header {
+  top: 0;
+  z-index: 20;
+  position: sticky;
+  background-color: #ffffff;
+}
+
+.navbar {
+  display: flex;
+  padding: 1rem 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+.logo svg path:last-child {
+  display: none;
+}
+
+.search {
+  gap: 5px;
+  display: flex;
+  justify-content: space-between;
+
+  padding: 5px;
+  cursor: pointer;
+  align-items: center;
+  border-radius: 10px;
+  border-radius: 9999px;
+  border: 1px solid #d0d0d0;
+  transition: all 100ms ease-in;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.search:hover {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.search input {
+  border: none;
+  padding: 8px;
+  outline: none;
+  color: #222;
+  font-size: 16px;
+  border-radius: 9999px;
+}
+
+.search input::placeholder {
+  color: #848282;
+}
+
+.search .icon {
+  display: grid;
+  place-items: center;
+
+  width: 30px;
+  height: 30px;
+  color: #ffffff;
+  border-radius: 50%;
+  background-color: #ff385c;
+}
+
+.menu {
+  gap: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px;
+  display: none;
+  cursor: pointer;
+  padding-left: 15px;
+  border-radius: 9999px;
+  background-color: #ffffff;
+  border: 1px solid #d0d0d0;
+  transition: all 100ms ease-in;
+}
+
+.menu:hover {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* categories */
+.categories {
+  border-top: 1px solid #e3e3e3;
+}
+
+.categories span {
+  gap: 8px;
+  display: inline-flex;
+  flex-direction: column;
+
+  padding: 15px 0;
+  margin: 0 20px;
+  font-size: 12px;
+  cursor: pointer;
+  align-items: center;
+  min-width: max-content;
+  transition: all 100ms ease-in;
+  border-bottom: 3px solid transparent;
+}
+
+.categories > div > div {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.categories > div > div::-webkit-scrollbar {
+  height: 0;
+}
+
+.categories span svg {
+  width: 24px;
+  height: 24px;
+  stroke: #717171;
+}
+
+.categories span small {
+  color: #717171;
+  font-weight: 600;
+}
+
+.categories span:first-child {
+  margin-left: 0;
+}
+
+.categories span:last-child {
+  margin-right: 0;
+}
+
+.categories span:hover {
+  border-bottom: 3px solid #d0d0d0;
+}
+
+.categories span:hover svg {
+  stroke: #222;
+}
+
+.categories span:hover small {
+  color: #222;
+}
+
+/* responsive css */
+@media (min-width: 500px) {
+  .logo svg {
+    width: 102px;
+  }
+
+  .logo svg path:last-child {
+    display: block;
+  }
+}
+
+@media (min-width: 640px) {
+  .menu {
+    display: flex;
+  }
+}
